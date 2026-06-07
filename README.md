@@ -421,31 +421,34 @@ NPU 장착 시 발생하는 I2C 통신 간섭 문제를 8-Bit GPIO 병렬 통신
 
 ```bash
 .
-├── README.md
-├── raspberry_pi/
-│   └── utils/
-│       ├ __init__.py
-│       ├ rapi_logics.py
-│       └ utils.py
-│   └── workers/
-│       ├ hailo_worker.py
-│       ├ hardware_worker.py
-│       └ mediapipe_worker.py
-│   └── config.py
+## 📁 Project Structure
+
+```text
+realtime-action-response-robot/
+├── sever/
+│   ├── templates/
+│   │   └── index.html
+│   └── server.ipynb
+│
+├── src/
+│   ├── workers/
+│   │   ├── hailo_worker.py
+│   │   ├── hardware_worker.py
+│   │   └── mediapipe_worker.py
+│   ├── config.py
 │   └── main.py
-│    
+│
 ├── stm32/
 │   └── vision_Ai_robot_Guide.c
 │
-├── app/
-│   └── inventor/
-├── docs/
-│   ├── circuit/
-│   ├── report/
-│   └── images/
-└── assets/
-    ├── demo.gif
-    └── architecture.png
+├── utils/
+│   ├── __init__.py
+│   ├── rapi_logics.py
+│   └── utils.py
+│
+├── .gitignore
+├── PROJECT_ANALYSIS.md
+└── README.md
 ```
 
 
