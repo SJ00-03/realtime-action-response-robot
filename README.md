@@ -79,9 +79,11 @@ flowchart LR
 | Web | HTML, CSS, JavaScript |
 | Structure | `src/`, `sever/`, `stm32/`, `utils/`, `docs/`, `assets/` |
 
-자세한 내용은 문서로 분리했습니다.
+### 🔗 상세 문서
 
-- [담당 역할 상세](docs/contribution.md)
-- [기술 보고서](docs/technical_report.md)
-- [트러블슈팅](docs/troubleshooting.md)
-- [학습 결과](docs/training_result.md)
+> 자세한 내용은 아래 문서로 분리했습니다.
+
+- [담당 역할 상세](./docs/contribution.md)
+- [기술 보고서](./docs/technical_report.md)
+- [트러블슈팅](./docs/troubleshooting.md)
+- [학습 결과](./docs/training_result.md)
