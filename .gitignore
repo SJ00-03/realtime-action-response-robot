@@ -17,3 +17,11 @@ performance_metrics_*.csv
 .ipynb_checkpoints/
 .DS_Store
 Thumbs.db
+data/
+datasets/
+runs/
+weights/
+*.engine
+*.mp4
+*.avi
+*.mov
