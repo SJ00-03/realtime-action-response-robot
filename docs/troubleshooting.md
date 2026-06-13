@@ -1,6 +1,6 @@
-# Troubleshooting
+# 🚧 Troubleshooting
 
-## 1. `attack` / `smoking` 클래스 혼동
+## 🏷 1. `attack` / `smoking` 클래스 혼동
 
 ### 문제
 
@@ -19,7 +19,7 @@
 
 ---
 
-## 2. Hailo 변환 후 미탐지 또는 입력 크기 문제
+## ⚠️ 2. Hailo 변환 후 미탐지 또는 입력 크기 문제
 
 ### 문제
 
@@ -37,7 +37,7 @@
 
 ---
 
-## 3. YOLO + MediaPipe 동시 사용 시 FPS 저하
+## 📉 3. YOLO + MediaPipe 동시 사용 시 FPS 저하
 
 ### 문제
 

@@ -1,6 +1,6 @@
-# Real-time Action Response Robot
+# 🤖 실시간 행동 분석 기반 AI 안전관리 로봇
 
-## Hero
+## 📌 프로젝트 핵심
 
 > 실시간 영상에서 **낙상·흡연·공격 행동**을 감지하고, **웹 모니터링 UI**와 **Bluetooth 로봇 제어**에 연동한 AI 안전관리 로봇입니다.
 
@@ -19,7 +19,7 @@
 
 ---
 
-## Results
+## 📊 Results
 
 | mAP@50 | mAP@50:95 | FPS | Latency |
 |---:|---:|---:|---:|
@@ -27,16 +27,16 @@
 
 ---
 
-## Demo
+## 🎥 Demo
 
-| AI Detection | Web Dashboard | Bluetooth Control |
+| 🎥 AI Detection | 🖥 Web Dashboard | 📡 Bluetooth Control |
 |---|---|---|
 | `assets/detection_demo.gif` 추가 예정 | `assets/web_dashboard.png` 추가 예정 | `assets/bluetooth_control.jpg` 추가 예정 |
 | 사람·낙상·공격·흡연 감지 | 실시간 영상·FPS·알림·통계 | HC-06 + STM32 UART 수동 제어 |
 
 ---
 
-## My Contribution
+## 🙋 My Contribution
 
 | Area | What I did |
 |---|---|
@@ -49,14 +49,14 @@
 
 ---
 
-## Overview
+## 📌 프로젝트 개요
 
 CCTV 관제의 사각지대와 대응 지연을 줄이기 위한 **실시간 행동 분석 기반 AI 안전관리 로봇**입니다.  
 감지 클래스는 `person`, `falldown`, `attack`, `smoking`입니다.
 
 ---
 
-## Architecture
+## 🏗 시스템 구조
 
 ```mermaid
 flowchart LR
@@ -70,7 +70,7 @@ flowchart LR
 
 ---
 
-## Tech Stack & Details
+## 🧰 Tech Stack & Details
 
 | Category | Stack |
 |---|---|
