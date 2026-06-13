@@ -79,11 +79,31 @@ flowchart LR
 | Web | HTML, CSS, JavaScript |
 | Structure | `src/`, `sever/`, `stm32/`, `utils/`, `docs/`, `assets/` |
 
-### 🔗 상세 문서
+## 🔗 상세 문서
 
-> 자세한 내용은 아래 문서로 분리했습니다.
+> 프로젝트의 세부 구현 내용은 아래 문서로 분리했습니다.
 
-- [담당 역할 상세](./docs/contribution.md)
-- [기술 보고서](./docs/technical_report.md)
-- [트러블슈팅](./docs/troubleshooting.md)
-- [학습 결과](./docs/training_result.md)
+<table>
+  <tr>
+    <td align="center" width="25%">
+      <b>🙋 담당 역할 상세</b><br/>
+      데이터셋 · AI 학습 · 웹 · Bluetooth<br/><br/>
+      <a href="./docs/contribution.md">문서 보기</a>
+    </td>
+    <td align="center" width="25%">
+      <b>📘 기술 보고서</b><br/>
+      전체 시스템 구조 및 구현 흐름<br/><br/>
+      <a href="./docs/technical_report.md">문서 보기</a>
+    </td>
+    <td align="center" width="25%">
+      <b>🚧 트러블슈팅</b><br/>
+      문제 원인 · 해결 과정 · 결과<br/><br/>
+      <a href="./docs/troubleshooting.md">문서 보기</a>
+    </td>
+    <td align="center" width="25%">
+      <b>📈 학습 결과</b><br/>
+      데이터셋 · mAP · 클래스별 성능<br/><br/>
+      <a href="./docs/training_result.md">문서 보기</a>
+    </td>
+  </tr>
+</table>
