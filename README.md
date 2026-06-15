@@ -78,13 +78,10 @@
 
 <p align="center">
   <a href="assets/operation_flow.png">
-    <img src="assets/operation_flow.png" width="100%" alt="Operation Flow Overview"/>
-  </a>
+![Operation Flow](assets/operation_flow.png)  </a>
 </p>
 
-<p align="center">
-  <sub>클릭하면 원본 크기로 볼 수 있습니다.</sub>
-</p>
+
 ---
 
 ## 🔌 Hardware Configuration
