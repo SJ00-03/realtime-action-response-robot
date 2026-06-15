@@ -1,18 +1,10 @@
 # 🤖 실시간 행동 분석 기반 AI 안전관리 로봇
 
 > 실시간 행동 분석 기반 대응 로봇은 Raspberry Pi 5, STM32F407, YOLO, MediaPipe Pose, Hailo AI Accelerator, Web Dashboard를 연동하여 위험 행동을 실시간으로 탐지하고 하드웨어 반응까지 수행하는 통합 로봇 시스템입니다.
----
-> ## 🙋 Team / Role
 
-| Area | What I did |
-|---|---|
-| **Dataset** | AI Hub + 직접 수집 데이터 정리, 4개 클래스 라벨링·검수 |
-| **AI Training** | YOLO 커스텀 학습, Precision/Recall/mAP 분석, 혼동 클래스 재학습 |
-| **Web Dashboard** | 실시간 영상, FPS, 위험 알림, 클래스별 상태·통계 UI 구현 |
-
-> 팀 전체 구현 영역인 STM32 전체 제어, Hailo 변환, 하드웨어 제작은 별도 시스템 구성으로 구분했습니다.
-
----
+<p align="center">
+  <img src="assets/cover_robot.png" width="850" alt="Project Cover"/>
+</p>
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![YOLO](https://img.shields.io/badge/YOLO-111F68?style=flat-square)
@@ -21,8 +13,6 @@
 ![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-A22846?style=flat-square&logo=raspberrypi&logoColor=white)
 ![STM32](https://img.shields.io/badge/STM32-03234B?style=flat-square)
 ![Bluetooth](https://img.shields.io/badge/Bluetooth-0082FC?style=flat-square&logo=bluetooth&logoColor=white)
-
-> 현재 `assets/`에는 README에서 안전하게 참조할 수 있는 로컬 이미지/GIF 파일이 없습니다. 로컬 데모 이미지는 파일이 실제로 추가된 뒤 연결하고, 통합 동작 영상은 아래 YouTube 썸네일 링크로 제공합니다.
 
 ---
 
@@ -34,15 +24,17 @@
 
 > Click the thumbnail to watch the full integrated operation demo on YouTube.
 
-### Local Demo Assets
+### AI Detection Demo
 
-| Asset | Status |
-|---|---|
-| AI Detection Demo GIF | `assets/detection_demo.gif` 파일이 추가되면 README에 연결 |
-| Web Monitoring Dashboard | `assets/web_dashboard.png` 파일이 추가되면 README에 연결 |
-| Project Cover Image | `assets/cover_robot.png` 파일이 추가되면 제목 아래 대표 이미지로 연결 |
+<p align="center">
+  <img src="assets/detection_demo.gif" width="850" alt="AI Detection Demo"/>
+</p>
 
----
+### Web Monitoring Dashboard
+
+<p align="center">
+  <img src="assets/web_dashboard.png" width="850" alt="Web Dashboard"/>
+</p>
 
 ## ✨ Key Features
 
@@ -70,23 +62,21 @@
 
 ## 🏗 System Flow
 
-전체 시스템은 카메라 입력, AI 탐지, 웹 모니터링, STM32 제어, 하드웨어 반응으로 이어집니다. 로컬 `operation_flow` 이미지가 아직 없으므로, 현재는 깨지지 않는 Mermaid 다이어그램으로 흐름을 표시합니다.
+전체 시스템은 카메라 입력, AI 탐지, 웹 모니터링, STM32 제어, 하드웨어 반응으로 이어집니다. 아래 흐름도는 위험 행동 판단과 하드웨어 반응 단계가 어떻게 연결되는지 보여줍니다.
 
-```mermaid
-flowchart LR
-    A[Camera] --> B[Raspberry Pi 5]
-    B --> C[YOLO / MediaPipe Pose]
-    C --> D[Web Dashboard]
-    C --> E[STM32F407]
-    E --> F[Motor / LED / Buzzer]
-    G[Bluetooth App] --> E
-```
+<p align="center">
+  <img src="assets/operation_flow.png" width="850" alt="Operation Flow"/>
+</p>
 
 ---
 
 ## 🔌 Hardware Configuration
 
-Raspberry Pi 5는 영상 처리와 AI 추론을 담당하고, STM32F407은 모터·LED·Buzzer 등 물리 장치 제어를 담당합니다. 하드웨어 회로 이미지는 `assets/hardware_circuit.png` 같은 실제 파일이 추가된 뒤 연결할 수 있습니다.
+Raspberry Pi 5는 영상 처리와 AI 추론을 담당하고, STM32F407은 모터·LED·Buzzer 등 물리 장치 제어를 담당합니다. 회로도는 Raspberry Pi 5, STM32F407, 센서, LED, Buzzer, Motor Driver 연결 구조를 나타냅니다.
+
+<p align="center">
+  <img src="assets/hardware_circuit.png" width="850" alt="Hardware Circuit"/>
+</p>
 
 ---
 
@@ -97,13 +87,19 @@ Raspberry Pi 5는 영상 처리와 AI 추론을 담당하고, STM32F407은 모�
 - 감지 클래스: `person`, `falldown`, `attack`, `smoking`
 - 작업 내용: 라벨 생성, 누락 라벨 확인, 오분류 라벨 수정, 학습 구조 정리
 
-데이터셋 분포 또는 라벨링 결과 이미지는 실제 파일이 `assets/`에 추가된 뒤 README에 연결합니다.
+<p align="center">
+  <img src="assets/datasets.png" width="700" alt="Dataset"/>
+</p>
 
 ---
 
 ## 📈 AI Model Training
 
 YOLO 기반 커스텀 객체 탐지 모델을 학습하고 Precision, Recall, mAP 지표를 기준으로 성능을 분석했습니다. `attack`과 `smoking`처럼 자세와 손 위치가 유사한 클래스는 오탐 사례를 검토한 뒤 데이터 정제와 재학습을 반복했습니다.
+
+<p align="center">
+  <img src="assets/training_result.png" width="850" alt="Training Result"/>
+</p>
 
 | Metric | Result |
 |---|---:|
@@ -118,6 +114,14 @@ YOLO 기반 커스텀 객체 탐지 모델을 학습하고 Precision, Recall, mA
 
 모델 최적화는 실시간 동작을 목표로 추론 지연시간과 처리량을 함께 확인하는 방식으로 진행했습니다. Hailo AI Accelerator 적용 후 Raspberry Pi 환경에서도 웹 모니터링과 하드웨어 제어를 함께 수행할 수 있도록 성능을 개선했습니다.
 
+<p align="center">
+  <img src="assets/model_performance_comparison.png" width="850" alt="Model Performance Comparison"/>
+</p>
+
+<p align="center">
+  <img src="assets/latency_comparison.png" width="850" alt="Latency Comparison"/>
+</p>
+
 ---
 
 ## 📊 Performance Analysis
@@ -128,17 +132,21 @@ YOLO 기반 커스텀 객체 탐지 모델을 학습하고 Precision, Recall, mA
 | Latency | 위험 행동 감지 후 하드웨어 반응까지의 지연시간 최소화 |
 | Stability | Web Dashboard, STM32 UART, Bluetooth 제어 경로를 분리해 동작 안정성 확보 |
 
-성능 비교 그래프는 실제 `assets/processing_performance.png`, `assets/latency_comparison.png` 등이 추가되면 연결합니다.
+<p align="center">
+  <img src="assets/processing_performance.png" width="850" alt="Processing Performance"/>
+</p>
 
 ---
 
 ## 🏁 Final Result
 
-| mAP@50 | mAP@50:95 | FPS | Latency |
-|---:|---:|---:|---:|
-| **0.977** | **0.898** | **43.9** | **18.8 ms** |
+### Integrated Operation Demo
 
 최종적으로 AI 탐지, 웹 대시보드, STM32 제어, Bluetooth 수동 제어를 하나의 시스템으로 통합했습니다.
+
+<p align="center">
+  <img src="assets/final_performance_comparison.png" width="850" alt="Final Performance Comparison"/>
+</p>
 
 ---
 
@@ -176,6 +184,19 @@ YOLO 기반 커스텀 객체 탐지 모델을 학습하고 Precision, Recall, mA
 4. 웹 대시보드와 worker 프로세스를 실행해 실시간 탐지 상태를 확인합니다.
 
 > 실행 환경과 하드웨어 연결 방식은 시스템 구성에 따라 달라질 수 있으므로, 상세 구현 흐름은 [기술 보고서](docs/technical_report.md)를 참고하세요.
+
+---
+
+## 🙋 Team / Role
+
+| Area | What I did |
+|---|---|
+| **Dataset** | AI Hub + 직접 수집 데이터 정리, 4개 클래스 라벨링·검수 |
+| **AI Training** | YOLO 커스텀 학습, Precision/Recall/mAP 분석, 혼동 클래스 재학습 |
+| **Web Dashboard** | 실시간 영상, FPS, 위험 알림, 클래스별 상태·통계 UI 구현 |
+| **Bluetooth Control** | HC-06 + STM32 UART 기반 전진/후진/회전/정지/속도 제어 연동 |
+
+> 팀 전체 구현 영역인 STM32 전체 제어, Hailo 변환, 하드웨어 제작은 별도 시스템 구성으로 구분했습니다.
 
 ---
 
