@@ -1,6 +1,18 @@
 # 🤖 실시간 행동 분석 기반 AI 안전관리 로봇
 
 > 실시간 행동 분석 기반 대응 로봇은 Raspberry Pi 5, STM32F407, YOLO, MediaPipe Pose, Hailo AI Accelerator, Web Dashboard를 연동하여 위험 행동을 실시간으로 탐지하고 하드웨어 반응까지 수행하는 통합 로봇 시스템입니다.
+---
+> ## 🙋 Team / Role
+
+| Area | What I did |
+|---|---|
+| **Dataset** | AI Hub + 직접 수집 데이터 정리, 4개 클래스 라벨링·검수 |
+| **AI Training** | YOLO 커스텀 학습, Precision/Recall/mAP 분석, 혼동 클래스 재학습 |
+| **Web Dashboard** | 실시간 영상, FPS, 위험 알림, 클래스별 상태·통계 UI 구현 |
+
+> 팀 전체 구현 영역인 STM32 전체 제어, Hailo 변환, 하드웨어 제작은 별도 시스템 구성으로 구분했습니다.
+
+---
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![YOLO](https://img.shields.io/badge/YOLO-111F68?style=flat-square)
@@ -164,19 +176,6 @@ YOLO 기반 커스텀 객체 탐지 모델을 학습하고 Precision, Recall, mA
 4. 웹 대시보드와 worker 프로세스를 실행해 실시간 탐지 상태를 확인합니다.
 
 > 실행 환경과 하드웨어 연결 방식은 시스템 구성에 따라 달라질 수 있으므로, 상세 구현 흐름은 [기술 보고서](docs/technical_report.md)를 참고하세요.
-
----
-
-## 🙋 Team / Role
-
-| Area | What I did |
-|---|---|
-| **Dataset** | AI Hub + 직접 수집 데이터 정리, 4개 클래스 라벨링·검수 |
-| **AI Training** | YOLO 커스텀 학습, Precision/Recall/mAP 분석, 혼동 클래스 재학습 |
-| **Web Dashboard** | 실시간 영상, FPS, 위험 알림, 클래스별 상태·통계 UI 구현 |
-| **Bluetooth Control** | HC-06 + STM32 UART 기반 전진/후진/회전/정지/속도 제어 연동 |
-
-> 팀 전체 구현 영역인 STM32 전체 제어, Hailo 변환, 하드웨어 제작은 별도 시스템 구성으로 구분했습니다.
 
 ---
 
