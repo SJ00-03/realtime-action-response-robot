@@ -15,7 +15,7 @@
 ![STM32](https://img.shields.io/badge/STM32-03234B?style=flat-square)
 ![Bluetooth](https://img.shields.io/badge/Bluetooth-0082FC?style=flat-square&logo=bluetooth&logoColor=white)
 
-**Demo media will be added.**
+**Demo media placeholders. Add the files to `assets/` when ready.**
 
 ---
 
@@ -31,7 +31,7 @@
 
 | 🎥 AI Detection | 🖥 Web Dashboard | 📡 Bluetooth Control |
 |---|---|---|
-| `assets/detection_demo.gif` 추가 예정 | `assets/web_dashboard.png` 추가 예정 | `assets/bluetooth_control.jpg` 추가 예정 |
+| ![Detection Demo](assets/detection_demo.gif) | ![Web Dashboard](assets/web_dashboard.png) | ![Bluetooth Control](assets/bluetooth_control.jpg) |
 | 사람·낙상·공격·흡연 감지 | 실시간 영상·FPS·알림·통계 | HC-06 + STM32 UART 수동 제어 |
 
 ---
