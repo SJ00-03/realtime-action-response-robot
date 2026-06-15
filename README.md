@@ -31,7 +31,7 @@
 
 | 🎥 AI Detection | 🖥 Web Dashboard | 📡 Bluetooth Control |
 |---|---|---|
-| ![Detection Demo](assets/detection_demo.gif) | ![Web Dashboard](assets/web_dashboard.png) | ![Bluetooth Control](assets/bluetooth_control.jpg) |
+| ![Detection Demo](assets/detection_demo.gif) | ![Web Dashboard](assets/web_dashboard.png) | ![Bluetooth Control](assets/bluetooth_control.png) |
 | 사람·낙상·공격·흡연 감지 | 실시간 영상·FPS·알림·통계 | HC-06 + STM32 UART 수동 제어 |
 
 ---
