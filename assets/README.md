@@ -1,24 +1,34 @@
-# Assets Guide
+# Assets
 
-README에 표시할 데모 이미지와 GIF를 이 폴더에 추가합니다.
+이 폴더는 README와 문서에 사용할 이미지, GIF, 미디어 자료를 관리하는 위치입니다.
 
-현재 README는 깨진 이미지 링크를 방지하기 위해, 실제 파일이 없는 이미지는 마크다운 이미지로 표시하지 않고 파일명만 안내합니다.
-
-## 권장 파일명
+현재 이 폴더에는 README에서 참조할 수 있는 로컬 이미지/GIF 파일이 없습니다. 새 미디어를 추가할 때는 실제 파일명을 확인한 뒤 README에서 같은 경로를 사용해 깨진 링크가 생기지 않도록 합니다.
 
 | File | Purpose |
 |---|---|
-| `assets/cover_robot.jpg` | 프로젝트 대표 이미지 |
-| `assets/detection_demo.gif` | AI 탐지 데모 GIF |
-| `assets/integrated_demo.gif` | 전체 통합 동작 데모 GIF |
-| `assets/web_dashboard.png` | 웹 모니터링 UI 화면 |
-| `assets/dataset_labeling.png` | 데이터셋 라벨링 예시 |
-| `assets/training_result.png` | 학습 결과 그래프 |
-| `assets/bluetooth_control.jpg` | Bluetooth 제어 화면 또는 모듈 사진 |
-| `assets/system_architecture.png` | 시스템 아키텍처 이미지 |
+| YouTube Link: https://youtu.be/Yur_1fwSsXE | Full integrated operation demo video |
 
-## 추가 후 README 반영 방법
+## Recommended filenames for future assets
 
-1. 위 파일명으로 이미지를 `assets/` 폴더에 저장합니다.
-2. README의 Demo 섹션에서 해당 파일명을 이미지 마크다운으로 교체합니다.
-3. 파일이 실제로 존재하는지 확인한 뒤 커밋합니다.
+아래 파일명은 향후 미디어를 추가할 때 권장하는 이름입니다. 실제 파일이 추가되기 전에는 README에서 로컬 이미지 링크로 사용하지 않습니다.
+
+| File | Purpose |
+|---|---|
+| `assets/cover_robot.png` | Project representative image |
+| `assets/detection_demo.gif` | AI detection demo GIF |
+| `assets/web_dashboard.png` | Web monitoring dashboard screenshot |
+| `assets/datasets.png` | Dataset distribution or labeling result image |
+| `assets/operation_flow.png` | System operation flow diagram |
+| `assets/hardware_circuit.png` | Hardware circuit diagram |
+| `assets/training_result.png` | YOLO training result graph |
+| `assets/model_performance_comparison.png` | Model mAP performance comparison |
+| `assets/latency_comparison.png` | Inference latency comparison |
+| `assets/processing_performance.png` | Multi-processing and multi-threading performance comparison |
+| `assets/final_performance_comparison.png` | Final model performance comparison |
+
+## Checklist before linking assets
+
+1. 파일이 실제로 `assets/` 폴더에 존재하는지 확인합니다.
+2. README에 적은 경로와 실제 파일명이 대소문자까지 정확히 일치하는지 확인합니다.
+3. 이미지, GIF, 영상 같은 바이너리 파일을 새로 추가하는 PR인지 먼저 확인하고, 필요한 경우 별도 PR로 분리합니다.
+4. YouTube 영상은 GitHub README에서 `iframe` 대신 Markdown 썸네일 링크를 사용합니다.
