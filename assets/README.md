@@ -1,24 +1,24 @@
-# Assets Guide
+# Assets
 
-README에 표시할 데모 이미지와 GIF를 이 폴더에 추가합니다.
-
-현재 README는 깨진 이미지 링크를 방지하기 위해, 실제 파일이 없는 이미지는 마크다운 이미지로 표시하지 않고 파일명만 안내합니다.
-
-## 권장 파일명
+README와 문서에서 사용하는 이미지, GIF, 미디어 자료 목록입니다.
 
 | File | Purpose |
 |---|---|
-| `assets/cover_robot.jpg` | 프로젝트 대표 이미지 |
-| `assets/detection_demo.gif` | AI 탐지 데모 GIF |
-| `assets/integrated_demo.gif` | 전체 통합 동작 데모 GIF |
-| `assets/web_dashboard.png` | 웹 모니터링 UI 화면 |
-| `assets/dataset_labeling.png` | 데이터셋 라벨링 예시 |
-| `assets/training_result.png` | 학습 결과 그래프 |
-| `assets/bluetooth_control.jpg` | Bluetooth 제어 화면 또는 모듈 사진 |
-| `assets/system_architecture.png` | 시스템 아키텍처 이미지 |
+| `assets/cover_robot.png` | Project representative image |
+| `assets/detection_demo.gif` | AI detection demo GIF |
+| `assets/web_dashboard.png` | Web monitoring dashboard screenshot |
+| `assets/datasets.png` | Dataset distribution or labeling result image |
+| `assets/operation_flow.png` | System operation flow diagram |
+| `assets/hardware_circuit.png` | Hardware circuit diagram |
+| `assets/training_result.png` | YOLO training result graph |
+| `assets/model_performance_comparison.png` | Model mAP performance comparison |
+| `assets/latency_comparison.png` | Inference latency comparison |
+| `assets/processing_performance.png` | Multi-processing and multi-threading performance comparison |
+| `assets/final_performance_comparison.png` | Final model performance comparison |
+| YouTube Link: https://youtu.be/Yur_1fwSsXE | Full integrated operation demo video |
 
-## 추가 후 README 반영 방법
+## Linking checklist
 
-1. 위 파일명으로 이미지를 `assets/` 폴더에 저장합니다.
-2. README의 Demo 섹션에서 해당 파일명을 이미지 마크다운으로 교체합니다.
-3. 파일이 실제로 존재하는지 확인한 뒤 커밋합니다.
+1. README에 적는 경로와 실제 파일명이 대소문자까지 정확히 일치해야 합니다.
+2. GitHub README의 YouTube 영상은 `iframe` 대신 Markdown 썸네일 링크를 사용합니다.
+3. 이미지 파일을 교체할 때는 README와 이 목록을 함께 확인합니다.
