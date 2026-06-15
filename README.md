@@ -140,9 +140,7 @@ YOLO 기반 커스텀 객체 탐지 모델을 학습하고 Precision, Recall, mA
 
 ## 🏁 Final Result
 
-| mAP@50 | mAP@50:95 | FPS | Latency |
-|---:|---:|---:|---:|
-| **0.977** | **0.898** | **43.9** | **18.8 ms** |
+### Integrated Operation Demo
 
 최종적으로 AI 탐지, 웹 대시보드, STM32 제어, Bluetooth 수동 제어를 하나의 시스템으로 통합했습니다.
 
