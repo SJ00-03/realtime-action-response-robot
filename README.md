@@ -77,7 +77,7 @@
 전체 시스템은 카메라 입력, AI 탐지, 웹 모니터링, STM32 제어, 하드웨어 반응으로 이어집니다. 아래 흐름도는 위험 행동 판단과 하드웨어 반응 단계가 어떻게 연결되는지 보여줍니다.
 
 <p align="center">
-  <img src="assets/operation_flow.png" width="850" alt="Operation Flow"/>
+  <img src="assets/operation_flow.png" width="600" alt="Operation Flow"/>
 </p>
 
 ---
